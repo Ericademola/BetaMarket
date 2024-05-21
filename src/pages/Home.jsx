@@ -1,8 +1,11 @@
+import DisplayItems from "../components/DisplayItems"
 
 const Home = () => {
     return (
         <>
-            <main></main>
+            <main>
+                <DisplayItems />
+            </main>
         </>
     )
 }
