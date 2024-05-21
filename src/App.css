@@ -41,6 +41,10 @@ nav a {
   color: blueviolet;
 }
 
+main {
+  padding: 50px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 290px 290px 290px 290px;
@@ -48,9 +52,10 @@ nav a {
 }
 
 .item {
-  min-height: 100px;
+  height: 440px;
   border: 2px solid blueviolet;
   border-radius: 10px;
+
 }
 
 .item-image {
@@ -71,6 +76,9 @@ nav a {
   background-color: rgb(205, 181, 228);
   padding: 5px;
   border-radius: 0 0 7px 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .rate-btn {
