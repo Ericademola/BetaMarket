@@ -14,7 +14,7 @@ const DisplayItems = ({ products, loading }) => {
                                 <div className="item">
                                     <div className="item-image">
                                         <div className="love">
-                                            <FaRegHeart />
+                                            {true ? <FaRegHeart /> : <FaHeart />}
                                         </div>
                                         <img src={`${item.image}`} alt="" />
                                     </div>
