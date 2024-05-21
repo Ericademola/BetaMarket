@@ -1,5 +1,8 @@
+
 export const Favourite = () => {
     return (
-        <div>Favourite</div>
+        <div>
+            f
+        </div>
     )
 }
