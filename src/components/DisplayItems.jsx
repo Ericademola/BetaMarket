@@ -1,5 +1,22 @@
+import { useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 
+const FavouriteIcon = ({ icon }) => {
+    const [favourite, setFavourite] = useState(icon);
+
+    const handleFavourite = () => {
+        if (favourite) {
+            setFavourite(false);
+        } else {
+            setFavourite(true);
+        }
+    }
+    return (
+        <div className="love" onClick={handleFavourite}>
+            {favourite ? <FaHeart /> : <FaRegHeart />}
+        </div>
+    )
+}
 
 const DisplayItems = ({ products, loading }) => {
     return (
@@ -13,9 +30,7 @@ const DisplayItems = ({ products, loading }) => {
                             products && products.map((item) => (
                                 <div className="item" key={item.id}>
                                     <div className="item-image">
-                                        <div className="love">
-                                            <FaRegHeart /> <FaHeart />
-                                        </div>
+                                        <FavouriteIcon icon={item.favourite} />
                                         <img src={`${item.image}`} alt="" />
                                     </div>
                                     <div className="item-detail">

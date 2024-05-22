@@ -15,7 +15,6 @@ const useGetItems = () => {
             .then((json) => {
                 setData(json);
                 setIsPending(false)
-                console.log(json);
             }) // handle response
             .catch(() => {
                 alert("could not fetch data from the resource");
