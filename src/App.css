@@ -42,13 +42,15 @@ nav a {
 }
 
 main {
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 290px 290px 290px 290px;
   gap: 30px;
+  width: fit-content;
+  margin: auto;
 }
 
 .item {

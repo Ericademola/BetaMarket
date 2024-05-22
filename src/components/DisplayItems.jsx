@@ -6,22 +6,22 @@ const DisplayItems = ({ products, loading }) => {
         <>
             {
                 loading ?
-                    <h1>loading...</h1>
+                    <h1>Loading...</h1>
                     :
                     <div className="grid">
                         {
                             products && products.map((item) => (
-                                <div className="item">
+                                <div className="item" key={item.id}>
                                     <div className="item-image">
                                         <div className="love">
-                                            {true ? <FaRegHeart /> : <FaHeart />}
+                                            <FaRegHeart /> <FaHeart />
                                         </div>
                                         <img src={`${item.image}`} alt="" />
                                     </div>
                                     <div className="item-detail">
-                                        <h3>{item.title.length > 20 ? `${item.title.slice(0, 19)}...` : item.title}</h3>
+                                        <h3>{item.title.length > 20 ? `${item.title.slice(0, 20)}...` : item.title}</h3>
                                         <p>₦{item.price}</p>
-                                        <p>{item.description.length > 90 ? `${item.description.slice(0, 89)}...` : item.description}</p>
+                                        <p>{item.description.length > 90 ? `${item.description.slice(0, 91)}...` : item.description}</p>
                                         <div className="rate-btn">
                                             <i>Rating {item.rating.rate}</i>
                                             <button>Add to cart</button>
@@ -30,7 +30,6 @@ const DisplayItems = ({ products, loading }) => {
                                 </div>
                             ))
                         }
-
                     </div>
             }
         </>
