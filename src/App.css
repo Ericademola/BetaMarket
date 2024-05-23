@@ -6,6 +6,8 @@
 header {
   background-color: rgb(205, 181, 228);
   padding: 10px;
+  position: sticky;
+  top: 0;
 }
 
 header h1 {
@@ -16,7 +18,24 @@ header h1 {
 
 nav {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+sup {
+  background-color: rgb(162, 77, 241);
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 20%;
+}
+
+.cart-icon {
+  font-size: 25px;
+  color: blueviolet;
+}
+
+.company {
+  display: flex;
   align-items: center;
 }
 
@@ -67,6 +86,7 @@ main {
 .item-image .love {
   width: fit-content;
   margin-left: auto;
+  color: blueviolet;
 }
 
 .item-image img {
@@ -115,4 +135,108 @@ footer {
 
 footer p {
   margin-right: 40px;
+}
+
+.model-container {
+  background-color: rgba(138, 43, 226, 0.5);
+  position: fixed;
+  top: 11vh;
+  height: 100%;
+}
+
+.times-icon {
+  width: fit-content;
+  margin-left: auto;
+  color: blueviolet;
+}
+
+.times-icon:hover {
+  color: red;
+}
+
+.model {
+  background-color: #fff;
+  width: 70%;
+  margin: auto;
+  min-height: 200px;
+  max-height: 70vh;
+  overflow-y: auto;
+  border: 2px solid blueviolet;
+  border-radius: 15px;
+
+  padding: 10px;
+}
+
+.model-details {
+  display: flex;
+  gap: 10px;
+}
+
+.picked-item-image img{
+  width: 250px;
+  height: 300px;
+}
+
+.picked-item-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+.button-container button {
+  width: 20px;
+  color: #fff;
+  background-color: blueviolet;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 290px 290px;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 290px;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+  }
+  .model-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 290px;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .model-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

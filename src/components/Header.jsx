@@ -1,31 +1,27 @@
-import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom"
+import { IoIosCart } from "react-icons/io";
+import { useContext } from "react";
 import { UserContext } from "../App";
-
 const Header = () => {
-    const { cartItem } = useContext(UserContext);
-
-    // useEffect(() => {
-    //     const existingCart = JSON.parse(localStorage.getItem('cart'));
-    //     // setCartProducts(existingCart)
-    // }, [cartItem])
+    const { cartNum } = useContext(UserContext)
     return (
         <header>
-            <h1>BetaMarket</h1>
+
             <nav>
-                <Link to='/'>
-                    <div className="logo">
-                        BM
-                    </div>
-                </Link>
-                <Link to='/favourite'>
-                    Favourite
-                </Link>
-                <Link to='/cart'>
-                    Cart
-                </Link>
+                <div className="company">
+                    <Link to='/'>
+                        <div className="logo">
+                            BM
+                        </div>
+                    </Link>
+                    <h1>BetaMarket</h1>
+                </div>
+                <div>
+                    <span className="cart-icon"><IoIosCart /></span>
+                    <sup>{cartNum}</sup>
+                </div>
+
             </nav>
-            <p>{cartItem}</p>
 
         </header>
     )
