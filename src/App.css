@@ -6,6 +6,8 @@
 header {
   background-color: rgb(205, 181, 228);
   padding: 10px;
+  position: sticky;
+  top: 0;
 }
 
 header h1 {
@@ -84,6 +86,7 @@ main {
 .item-image .love {
   width: fit-content;
   margin-left: auto;
+  color: blueviolet;
 }
 
 .item-image img {
@@ -132,4 +135,34 @@ footer {
 
 footer p {
   margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 290px 290px;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 290px;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 290px;
+    gap: 30px;
+    width: fit-content;
+    margin: auto;
+  }
 }
