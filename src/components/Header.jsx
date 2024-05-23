@@ -1,4 +1,3 @@
-import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom"
 import { IoIosCart } from "react-icons/io";
 import { useContext } from "react";
@@ -23,7 +22,6 @@ const Header = () => {
                 </div>
 
             </nav>
-            <p>{cartItem}</p>
 
         </header>
     )
