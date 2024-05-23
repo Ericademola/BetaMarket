@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { UserContext } from "../App";
 
@@ -45,8 +46,7 @@ const DisplayItems = ({ products, loading, setIsShowModel }) => {
                                         <p>{item.description.length > 90 ? `${item.description.slice(0, 91)}...` : item.description}</p>
                                         <div className="rate-btn">
                                             <i>Rating {item.rating.rate}</i>
-                                            <button onClick={() => handleProduct(item)}>Add to cart</button>
-                                        </div>
+                                            <button onClick={() => handleProduct(item)}>Add to cart</button>                                        </div>
                                     </div>
                                 </div>
                             ))
