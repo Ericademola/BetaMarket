@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { UserContext } from "../App";
 
 
 const LikeComp = ({ item }) => {
@@ -17,6 +18,12 @@ const LikeComp = ({ item }) => {
 }
 
 const DisplayItems = ({ products, loading }) => {
+    const { setCartItem } = useContext(UserContext);
+
+    const handleProduct = (item) => {
+        setCartItem(item)
+    }
+
     return (
         <>
             {
@@ -37,7 +44,7 @@ const DisplayItems = ({ products, loading }) => {
                                         <p>{item.description.length > 90 ? `${item.description.slice(0, 91)}...` : item.description}</p>
                                         <div className="rate-btn">
                                             <i>Rating {item.rating.rate}</i>
-                                            <button>Add to cart</button>
+                                            <button onClick={() => handleProduct(item)}>Add to cart</button>
                                         </div>
                                     </div>
                                 </div>
