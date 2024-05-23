@@ -16,7 +16,24 @@ header h1 {
 
 nav {
   display: flex;
-  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+sup {
+  background-color: rgb(162, 77, 241);
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 20%;
+}
+
+.cart-icon {
+  font-size: 25px;
+  color: blueviolet;
+}
+
+.company {
+  display: flex;
   align-items: center;
 }
 
