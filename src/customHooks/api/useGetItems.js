@@ -5,21 +5,23 @@ const useGetItems = () => {
     const [isPending, setIsPending] = useState(true);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products') // url
-            .then(res => {
-                if (!res.ok) {
-                    throw Error('could not fetch data from database')
-                }
-                return res.json();
-            }) //get the response
-            .then((json) => {
-                setData(json);
-                setIsPending(false)
-            }) // handle response
-            .catch(() => {
-                alert("could not fetch data from the resource");
-                setIsPending(false);
-            }) // handle error
+        if (!localStorage.getItem("prodh")) {
+            fetch('https://fakestoreapi.com/products') // url
+                .then(res => {
+                    if (!res.ok) {
+                        throw Error('could not fetch data from database')
+                    }
+                    return res.json();
+                }) //get the response
+                .then((json) => {
+                    setData(json);
+                    setIsPending(false)
+                }) // handle response
+                .catch(() => {
+                    alert("could not fetch data from the resource");
+                    setIsPending(false);
+                }) // handle error
+        }
     }, [])
     return { data, isPending };
 }
