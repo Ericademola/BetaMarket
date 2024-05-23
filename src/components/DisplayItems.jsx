@@ -17,11 +17,12 @@ const LikeComp = ({ item }) => {
     )
 }
 
-const DisplayItems = ({ products, loading }) => {
+const DisplayItems = ({ products, loading, setIsShowModel }) => {
     const { setCartItem } = useContext(UserContext);
 
     const handleProduct = (item) => {
-        setCartItem(item)
+        setCartItem(item);
+        setIsShowModel(true);
     }
 
     return (

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 import { IoIosCart } from "react-icons/io";
+import { useContext } from "react";
+import { UserContext } from "../App";
 const Header = () => {
+    const { cartNum } = useContext(UserContext)
     return (
         <header>
 
@@ -15,7 +18,7 @@ const Header = () => {
                 </div>
                 <div>
                     <span className="cart-icon"><IoIosCart /></span>
-                    <sup>0</sup>
+                    <sup>{cartNum}</sup>
                 </div>
 
             </nav>

@@ -11,11 +11,13 @@ export const UserContext = React.createContext();
 
 function App() {
   const [cartItem, setCartItem] = useState();
+  const [cartNum, setCartNum] = useState(0);
   console.log(cartItem);
   return (
     <div className="App">
       <UserContext.Provider value={{
-        cartItem: cartItem, setCartItem
+        cartItem: cartItem, setCartItem,
+        cartNum: cartNum, setCartNum
       }} >
         <Header />
         <Routes>
