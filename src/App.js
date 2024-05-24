@@ -6,24 +6,23 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import React, { useState } from 'react';
 
-export const UserContext = React.createContext();
-
+export const AppContext = React.createContext()
 function App() {
   const [cartItem, setCartItem] = useState();
-  const [cartNum, setCartNum] = useState(0);
+  const [cartNumber, setCartNumber] = useState(0);
   return (
     <div className="App">
-      <UserContext.Provider value={{
+      <AppContext.Provider value={{
         cartItem: cartItem, setCartItem,
-        cartNum: cartNum, setCartNum
-      }} >
+        cartNumber: cartNumber, setCartNumber
+      }}>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
         </Routes>
         <Footer />
-      </UserContext.Provider>
+      </AppContext.Provider>
     </div>
   );
 }
