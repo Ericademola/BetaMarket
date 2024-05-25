@@ -7,7 +7,7 @@ const Rating = ({ rating }) => {
         <div className="rating-container">
             <i>Rating: </i>
             {
-                ratingsArr.map((star, index) =>
+                ratingsArr && ratingsArr.map((star, index) =>
                     <span key={index} className="rating-star">
                         {star}
                     </span>
