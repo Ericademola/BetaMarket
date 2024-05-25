@@ -74,10 +74,9 @@ main {
 }
 
 .item {
-  height: 440px;
+  /* height: 440px; */
   border: 2px solid blueviolet;
   border-radius: 10px;
-
 }
 
 .item-image {

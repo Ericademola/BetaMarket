@@ -4,7 +4,7 @@ const Rating = ({ rating }) => {
     const starRating = Math.round(rating);
     const ratingsArr = Array(starRating).fill(<FaStar />)
     return (
-        <div>
+        <div className="rating-container">
             <i>Rating: </i>
             {
                 ratingsArr.map((star, index) =>
