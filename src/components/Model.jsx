@@ -32,7 +32,7 @@ const Model = ({ setIsShowModel }) => {
                     <div className="picked-item-detail">
                         <h3>{cartItem.title}</h3>
                         <p>{cartItem.description}</p>
-                        <Rating rating={cartItem.rate.rating} />
+                        <Rating rating={cartItem.rating.rate} />
                         <h3>₦{cartItem.price}</h3>
                         <div className="button-container">
                             <button onClick={handleMinus}>-</button>
